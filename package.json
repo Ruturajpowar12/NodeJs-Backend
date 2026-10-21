@@ -1,0 +1,25 @@
+{
+  "name": "nodejs-backend",
+  "version": "1.0.0",
+  "description": "Learning and practicing **Node.js backend development** from basics to advanced concepts.",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Ruturajpowar12/NodeJs-Backend.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/Ruturajpowar12/NodeJs-Backend/issues"
+  },
+  "homepage": "https://github.com/Ruturajpowar12/NodeJs-Backend#readme",
+  "dependencies": {
+    "dotenv": "^18.0.8",
+    "express": "^5.3.0"
+  }
+}
