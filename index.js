@@ -11,7 +11,7 @@ app.get("/login", (req, res) => {
   res.send("<h1> loggin has succesfully</h1>");
 });
 app.get("/user", (req, res) => {
-  res.send("<h1> User is Ruturaj</h1>");
+  res.send("<h1> User is Rutura</h1>");
 });
 
 app.listen(process.env.PORT, () => {
