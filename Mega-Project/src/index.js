@@ -1,14 +1,22 @@
-import express from "express";
 import dotenv from "dotenv";
+import connectDB from "./db/index.js";
 
-const app = express();
-dotenv.config();
+import { app } from "./app.js";
+
+dotenv.config({
+  path: "./.env",
+});
 const PORT = process.env.PORT || 4000;
 
-app.get("/", (req, res) => {
-  res.send("Hello World");
-});
+import dns from "node:dns";
 
-app.listen(PORT, () => {
-  console.log(`Server Run At http://localhost:${PORT}`);
-});
+dns.setServers(["8.8.8.8", "8.8.4.4"]);
+connectDB()
+  .then(() => {
+    app.listen(PORT, () => {
+      console.log(`Server Run At http://localhost:${PORT}`);
+    });
+  })
+  .catch((err) => {
+    console.log("Database not Connected!");
+  });

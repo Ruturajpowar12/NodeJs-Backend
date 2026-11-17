@@ -8,7 +8,7 @@ app.get("/", (req, res) => {
   res.send("hello world");
 });
 app.get("/login", (req, res) => {
-  res.send("<h1> loggin has succesfully</h1>");
+  res.send("<h1> loggin has succefully</h1>");
 });
 app.get("/user", (req, res) => {
   res.send("<h1> User is Rutura</h1>");
