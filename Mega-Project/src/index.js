@@ -1,7 +1,7 @@
 import dotenv from "dotenv";
-import connectDB from "./db/index.js";
+import connectDB from "./config/db.js";
 
-import { app } from "./app.js";
+import app from "./app.js";
 
 dotenv.config({
   path: "./.env",
@@ -18,5 +18,5 @@ connectDB()
     });
   })
   .catch((err) => {
-    console.log("Database not Connected!");
+    console.log("Database not Connected!", err);
   });
